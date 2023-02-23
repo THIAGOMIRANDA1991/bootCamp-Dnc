@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+body {
+  margin: 0px; /* Margem Externa  */
+  padding: 0px; /* Margem Interna  */
+}
+
+#principal {
+  width: 100%; /* vai ocupar 100% da largura da pagina  */
+  height: 100px; /* Altura da Margem  */
+  background-color: #303030;
+  display: flex;
+  justify-content: space-between; /* diferente do around, ele vai deixar a margem sem espaço  */
+  align-items: center; /*centralizou itens na altura*/
+  border-bottom: 1px solid #bababa;
+}
+
+#menu {
+  display: flex;
+  width: 45%; /* vai ocupar 55% da LARGURA da barra  */
+  justify-content: space-around; /* vai seprar os itens igualmente dentro do FLEX - Home, Ultimas E...  */
+  align-items: center; /* centralizou os itens na altura  */
+  margin-right: 5%;
+}
+#principal div a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #ffffff;
+  text-decoration: none; /* tirar o underline  */
+}
+#principal div a:hover {
+  color: #bababa; /* quando o mouse passar por cima muda cor  */
+}
+
+#principal button {
+  margin-right: 5%; /* margem DIREITA */
+  background-color: #0c70f2;
+  border: 0px;
+  height: 40px;
+  width: 80px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+
+  box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25); /* sombra do botao  */
+  cursor: pointer; /* faz aparecer a maozinha no cursor  */
+}
