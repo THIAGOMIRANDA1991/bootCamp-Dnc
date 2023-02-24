@@ -1,13 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  /* VARIAVEIS*/
+  --azul-dnc: #0c70f2;
+  --preto-dnc: #303030;
+  --cinza-hover: #c9c9c9;
+
+  --fonte-padrao: "inter";
+}
+
 body {
   margin: 0px; /* Margem Externa  */
   padding: 0px; /* Margem Interna  */
+  background: linear-gradient(
+      180deg,
+      rgba(12, 112, 242, 0.5) 19.91%,
+      rgba(12, 112, 242, 0) 24.84%
+    ),
+    #303030;
+  background-repeat: no-repeat;
 }
 
 #principal {
   width: 100%; /* vai ocupar 100% da largura da pagina  */
   height: 100px; /* Altura da Margem  */
-  background-color: #303030;
+  background-color: var(--preto-dnc);
   display: flex;
   justify-content: space-between; /* diferente do around, ele vai deixar a margem sem espaço  */
   align-items: center; /*centralizou itens na altura*/
@@ -22,7 +39,7 @@ body {
   margin-right: 5%;
 }
 #principal div a {
-  font-family: "Inter";
+  font-family: var(--fonte-padrao);
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -31,17 +48,17 @@ body {
   text-decoration: none; /* tirar o underline  */
 }
 #principal div a:hover {
-  color: #bababa; /* quando o mouse passar por cima muda cor  */
+  color: var(--cinza-hover); /* quando o mouse passar por cima muda cor  */
 }
 
 #principal button {
   margin-right: 5%; /* margem DIREITA */
-  background-color: #0c70f2;
+  background-color: var(--azul-dnc);
   border: 0px;
   height: 40px;
   width: 80px;
 
-  font-family: "Inter";
+  font-family: var(--fonte-padrao);
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -50,4 +67,104 @@ body {
 
   box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25); /* sombra do botao  */
   cursor: pointer; /* faz aparecer a maozinha no cursor  */
+}
+
+/* seção ( SECTION ) principal do site V */
+
+section {
+  display: flex;
+  flex-direction: column; /* direção do flex, no caso COLUYNA */
+  justify-content: center;
+  align-items: center; /* uando ele pq está em COLUMN */
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+header {
+  color: white;
+  font-family: var(--fonte-padrao);
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 97px;
+  text-transform: uppercase; /* caixa alta */
+  margin-bottom: 20px; /* distância do  texto de baixo */
+  text-align: center;
+}
+header h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 100px; /* distância do  texto de baixo */
+}
+
+header .fPreto {
+  background-color: black;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* FORMULARIO */
+
+form {
+  color: white;
+  font-family: var(--fonte-padrao);
+  font-weight: 600;
+  font-size: 30px;
+  width: 600px; /* largura do formulário */
+  /* line-height: 36px; */
+  /* text-align: center; */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form input {
+  border-radius: 10px;
+  height: 30px;
+  border: 0px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+form label {
+  margin: 10px 0px 10px 0px; /* rosa dos ventos */
+}
+
+/* seletor de pseudo-elemento W3school explica */
+form input::placeholder {
+  color: #1e5092;
+  font-size: 15px;
+}
+
+.checkbox-itens label {
+  font-size: 25px;
+}
+.checkbox-itens {
+  display: flex;
+  justify-content: space-around; /* vai distruibuir no espao do FORM */
+  align-items: center; /* deixou as informações na mesma linha */
+}
+
+input[type="checkbox"] {
+  transform: scale(1.7);
+}
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: rgba(12, 112, 242, 0.9);
+  border-radius: 0px;
+  font-family: var(--fonte-padrao);
+  color: white;
+  margin-top: 70px; /* separou das informacoes de cima */
+  cursor: pointer;
 }
